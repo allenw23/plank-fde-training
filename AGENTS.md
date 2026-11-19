@@ -32,7 +32,7 @@ A Server Component renders on the server and sends no JavaScript to the browser.
 
 **Environment variables**
 
-- Exactly one module reads `process.env`: `src/lib/env.ts`. It validates the values and exports them typed.
+- Exactly one module reads `process.env`: `src/lib/config.ts`. It validates the values and exports them typed.
 - Everything else imports from that module. Never read `process.env` anywhere else.
 - Only the env module may expose a variable to the browser, and only with the `NEXT_PUBLIC_` prefix. Never put secrets in a `NEXT_PUBLIC_` variable.
 - Do not commit `.env` files. Document new variables in `.env.example`.
