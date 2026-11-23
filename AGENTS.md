@@ -11,6 +11,15 @@ Course project for Plank's AI FDE Course. It grows day by day into WorkBot, an e
 - `pnpm typecheck`: `next typegen` then `tsc --noEmit`.
 - `pnpm check`: lint, format check, typecheck and build, in that order. CI runs this on pushes to `main` and on pull requests. Run it before you finish a change.
 
+## Workflow
+
+1. Branch: `git switch -c <feature>`. Never commit to `main`.
+2. Build the change.
+3. Run `pnpm check`. Fix failures before continuing.
+4. Open a PR: `gh pr create --fill`.
+5. The user reviews with `/codex:review` and checks the Vercel preview.
+6. The user merges with `gh pr merge --merge`. Agents do not merge.
+
 ## Conventions
 
 Every change must follow these.
