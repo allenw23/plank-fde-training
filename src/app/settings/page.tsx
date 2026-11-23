@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -7,6 +8,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { commit, env } from "@/lib/config";
+
+export const metadata: Metadata = { title: "Settings" };
 
 export default function Settings() {
   return (
