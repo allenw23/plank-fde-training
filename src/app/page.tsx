@@ -30,17 +30,6 @@ const teams = [
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
-      <header className="border-b">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-3.5">
-          <span className="font-semibold">WorkBot</span>
-          <Link
-            href="/settings"
-            className={buttonVariants({ variant: "ghost", size: "sm" })}
-          >
-            Settings
-          </Link>
-        </div>
-      </header>
       <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-20 px-6 pt-24 pb-16">
         <section className="flex max-w-2xl flex-col gap-6">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">

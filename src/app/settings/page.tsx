@@ -10,23 +10,23 @@ import { commit, env } from "@/lib/config";
 
 export default function Settings() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center p-4">
-      <Card>
+    <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-8 px-6 pt-16 pb-16">
+      <h1 className="text-2xl font-semibold tracking-tight">Settings</h1>
+      <Card className="max-w-xl">
         <CardHeader>
-          <CardTitle>
-            <h1>Deployment</h1>
+          <CardTitle className="flex items-center gap-2">
+            <h2>Deployment</h2>
+            <Badge variant="secondary">{env}</Badge>
           </CardTitle>
-          <CardDescription>Where this build is running.</CardDescription>
+          <CardDescription>
+            The environment this instance runs in and the commit it serves.
+          </CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col gap-3">
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">Environment</span>
-            <Badge>{env}</Badge>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">Commit</span>
-            <code className="font-mono">{commit}</code>
-          </div>
+        <CardContent>
+          <dl className="grid grid-cols-[5rem_1fr]">
+            <dt className="text-muted-foreground">Commit</dt>
+            <dd className="font-mono">{commit}</dd>
+          </dl>
         </CardContent>
       </Card>
     </main>
