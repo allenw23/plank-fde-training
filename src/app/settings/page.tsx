@@ -13,7 +13,9 @@ export default function Settings() {
     <main className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center p-4">
       <Card>
         <CardHeader>
-          <CardTitle>Deployment</CardTitle>
+          <CardTitle>
+            <h1>Deployment</h1>
+          </CardTitle>
           <CardDescription>Where this build is running.</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-3">
