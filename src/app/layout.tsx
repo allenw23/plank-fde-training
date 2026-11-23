@@ -16,6 +16,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: { default: "workbot", template: "%s | workbot" },
   description: "Enterprise workflow platform",
+  // Known gap: og:url and og:image are not set. They need metadataBase
+  // (an absolute site URL, read through src/lib/config.ts) and a share image.
   openGraph: {
     title: "workbot",
     description: "Enterprise workflow platform",
