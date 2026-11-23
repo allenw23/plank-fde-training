@@ -14,8 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "workbot",
+  title: { default: "workbot", template: "%s | workbot" },
   description: "Enterprise workflow platform",
+  openGraph: {
+    title: "workbot",
+    description: "Enterprise workflow platform",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
